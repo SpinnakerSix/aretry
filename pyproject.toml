@@ -1,0 +1,53 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "async-retry"
+version = "0.1.0"
+description = "Lightweight retry decorator with async support and exponential backoff — zero dependencies"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+keywords = ["retry", "backoff", "async", "decorator", "resilience"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Utilities",
+    "Framework :: AsyncIO",
+    "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/SpinnakerSix/async-retry"
+Issues = "https://github.com/SpinnakerSix/async-retry/issues"
+Changelog = "https://github.com/SpinnakerSix/async-retry/blob/main/CHANGELOG.md"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/async_retry"]
+
+[dependency-groups]
+dev = [
+    "pytest>=7",
+    "pytest-asyncio>=0.23",
+    "pytest-cov>=4",
+    "ruff>=0.4",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+addopts = "--cov=async_retry --cov-report=term-missing -v"
+
+[tool.coverage.run]
+source = ["src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
