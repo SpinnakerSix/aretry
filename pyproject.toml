@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "async-retry"
+name = "aretry"
 version = "0.1.0"
 description = "Lightweight retry decorator with async support and exponential backoff — zero dependencies"
 readme = "README.md"
@@ -31,7 +31,7 @@ Issues = "https://github.com/SpinnakerSix/async-retry/issues"
 Changelog = "https://github.com/SpinnakerSix/async-retry/blob/main/CHANGELOG.md"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/async_retry"]
+packages = ["src/aretry"]
 
 [dependency-groups]
 dev = [
@@ -44,7 +44,7 @@ dev = [
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 asyncio_mode = "auto"
-addopts = "--cov=async_retry --cov-report=term-missing -v"
+addopts = "--cov=aretry --cov-report=term-missing -v"
 
 [tool.coverage.run]
 source = ["src"]

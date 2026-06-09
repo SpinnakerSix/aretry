@@ -14,7 +14,7 @@ pip install async-retry
 ## Usage
 
 ```python
-from async_retry import retry
+from aretry import retry
 
 # Works on sync functions
 @retry(times=3, on=requests.Timeout, backoff=2.0)
@@ -58,7 +58,7 @@ With `times=4, delay=1.0, backoff=2.0`:
 ## Error handling
 
 ```python
-from async_retry import RetryExhausted
+from aretry import RetryExhausted
 
 try:
     fetch()

@@ -2,7 +2,7 @@ from unittest.mock import AsyncMock, MagicMock, call, patch
 
 import pytest
 
-from async_retry import RetryExhausted, retry
+from aretry import RetryExhausted, retry
 
 
 # --- Sync ---
