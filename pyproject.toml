@@ -26,9 +26,9 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/SpinnakerSix/async-retry"
-Issues = "https://github.com/SpinnakerSix/async-retry/issues"
-Changelog = "https://github.com/SpinnakerSix/async-retry/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/SpinnakerSix/aretry"
+Issues = "https://github.com/SpinnakerSix/aretry/issues"
+Changelog = "https://github.com/SpinnakerSix/aretry/blob/main/CHANGELOG.md"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/aretry"]

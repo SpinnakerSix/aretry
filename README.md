@@ -1,4 +1,4 @@
-# async-retry
+# aretry
 
 Lightweight retry decorator for sync and async Python functions. Zero dependencies.
 
@@ -8,7 +8,7 @@ shipped a release since 2018 and has no async support. This is the modern replac
 ## Install
 
 ```
-pip install async-retry
+pip install aretry
 ```
 
 ## Usage
